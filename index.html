@@ -129,8 +129,8 @@
 		  <source src="/mp3/ocean_waves.mp3" type="audio/mpeg"/>
 		  Your browser does not support the audio tag.
 	  	</audio>
-    <img src="/slide_show_assets/p.png" title="Pause" id="pausebtn"/>
-    <img src="/audio_icons/mute_off.png" title="mute" id="mutebtn"/>
+    <img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/slide_show_assets/p.png" title="Pause" id="pausebtn"/>
+    <img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_off.png" title="mute" id="mutebtn"/>
 	</div>
 	<div id="dummy"></div>
 	<div id="dummy2"></div>
@@ -149,24 +149,24 @@
 
 			var renderer, scene, camera;
 
-			var files =['/the_sea_portfiolo/_MG_2525And7more.hdr',
-						'/the_sea_portfiolo/_MG_2601_2_3_4_6_7_8.hdr',
-						'/the_sea_portfiolo/_MG_2755And9more.hdr',
-						'/the_sea_portfiolo/_MG_3660And7more.hdr',
-						'/the_sea_portfiolo/_MG_4144_5_6_newest.hdr',
-						'/the_sea_portfiolo/_MG_4191_2_3.hdr',
-						'/the_sea_portfiolo/_MG_4940And9more.hdr',
-						'/the_sea_portfiolo/_MG_5471And9more.hdr',
-						'/the_sea_portfiolo/_MG_5569And9more.hdr',
-						'/the_sea_portfiolo/_MG_6256And9more2.hdr',
-						'/the_sea_portfiolo/_MG_6313And9more.hdr',
-						'/the_sea_portfiolo/_MG_7030And7more.hdr',
-						'/the_sea_portfiolo/_MG_7645And9more.hdr',
-						'/the_sea_portfiolo/_MG_8418And7more.hdr',
-						'/the_sea_portfiolo/_MG_8633_4_5_6_7_8_9.hdr',
-						'/the_sea_portfiolo/_MG_8643And9more.hdr',
-						'/the_sea_portfiolo/_MG_9146And9more_more.hdr',
-						'/the_sea_portfiolo/_MG_9656And9more.hdr'];
+			var files =['https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2525And7more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2601_2_3_4_6_7_8.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2755And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_3660And7more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_4144_5_6_newest.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_4191_2_3.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_4940And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_5471And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_5569And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_6256And9more2.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_6313And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_7030And7more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_7645And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_8418And7more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_8633_4_5_6_7_8_9.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_8643And9more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_9146And9more_more.hdr',
+						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_9656And9more.hdr'];
 				//document.getElementById("myAudio").play();
 
 				init();
@@ -175,10 +175,10 @@
 				var b = new debugClass({createNode:1,nodeId:"test"});
 				var t = 0;
 				var timerObj      = [null];// setInterval(set_aminte_pulse(params, t), 1);
-				var element = { bit: 1, playBtnImage : '/slide_show_assets/play.png',
-									   pauseBtnImage :'/slide_show_assets/p.png',
-									   muteOffBtnImage :'/audio_icons/mute_off.png',
-									   muteonBtnImage :'./audio_icons/mute_on.png',
+				var element = { bit: 1, playBtnImage : 'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/slide_show_assets/play.png',
+									   pauseBtnImage :'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/slide_show_assets/p.png',
+									   muteOffBtnImage :'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_off.png',
+									   muteonBtnImage :'.https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_on.png',
 									   mutebtn : "mutebtn",
 									   pbtnId:'pausebtn',
 									   s : scene,
