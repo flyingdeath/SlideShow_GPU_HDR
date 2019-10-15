@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>The Sea By,  Brian Spiegel.</title>
+		<title id="SlideShowTitle">The Sea By,  Brian Spiegel.</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="/SlideShow_GPU_HDR/yui/build/fonts/fonts-min.css">
@@ -82,7 +82,7 @@
 		  	width:50px;
 		  	height:50px;
 		  }
-	     #text_items{
+	     #text_items, #text_items2{
 			position:absolute;
 	        width:1024px;
 	        height:768px;
@@ -92,9 +92,12 @@
 	        top:0px;
       }
 
-      #text_items div{
+      #text_items div,
+      #text_items2 div{
         display:none;
       }
+      #item2_0 h1,
+      #item2_1 h2,
       #item_0 h1,
       #item_1 h2{
         text-align:center;
@@ -104,6 +107,28 @@
       	color:#FFF;
       	background-color:#000;
       }
+      #projects_container{
+      	display:none;
+      	padding-left: 36px;
+      }
+	  div#innerBtnContainer:hover #projects_container{
+		display:inline-block;
+	  }
+  	  .thumbnail{
+  	  	width:128px;
+  	  	height:86px;
+  	  }
+  	  #menuBtn{
+  	  	width:32px;
+  	  	height:32px;
+  	  	top:0px;
+	    position:absolute;
+
+  	  }
+  	  #innerBtnContainer{
+	    position:absolute;
+
+  	  }
       -->
     </style>
 	</head>
@@ -120,23 +145,45 @@
 				</div>
 				<div id="item_1"><h2>I want to show the coastline from beach, to cliff, to rock, to stone. I want to show the coastline it is made better by time and will of nature. I want to show the beach showing as the light from the sun bounces off of it. I want you to see it in all its vivid color that's why these images are now HDR and you are seeing the most light detail possible perceived. I hope you like these pictures they took time and effort to create and I enjoy viewing them. </h2></div>
 		  </div>
+		   <div id="text_items2">
+
+		  				<div id="item2_0"><h1>The Forest </h1>
+		  									<span id="title_sig">
+		  									  <p>By Brian Spiegel.<br/></p>
+		  									</span>
+		  				</div>
+					<div id="item2_1">
+					<h2>
+					I'm going to show the forest from branch to tree to running stream to rivers. I have a sort of a problem not many people of seeing these sites I've seen, I need your help you see to fill in your imagination and see into the forests as I see them. I hope you enjoy these photographs I have enjoyed creating and editing them and finally showing them.
+					</h2>
+				</div>
+			</div>
 		</div>
     </div>
     <div id="sig">
       <p><span id="index"></span> Brian Spiegel.<br/></p>
     </div>
     <div id="btncontainer">
-		<audio  autoplay="true" id="myAudio" loop="true">
-		  <source src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/gh-pages/mp3/ocean_waves.mp3" type="audio/mpeg"/>
+		<audio   id="myAudio" loop="true">
+		  <source src="#" type="audio/mpeg"/>
 		  Your browser does not support the audio tag.
 	  	</audio>
+	  	<div id="innerBtnContainer">
+			<img src="slide_show_assets/menu.png" title="Menu" id="menuBtn" />
+			<span id="projects_container">
+				<img src="the_sea_portfiolo/cover_thumbnail/_MG_2601_2_3_4_6_7_8.jpg" title="The Sea" id="theSea" class="thumbnail" />
+				<img src="the_forest_portfolio/coverThumbnail/_MG_7294And8more.jpg" title="The Forest" id="theForest" class="thumbnail" />
+			</span>
+	  	</div>
     <img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/slide_show_assets/p.png" title="Pause" id="pausebtn"/>
-    <img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_off.png" title="mute" id="mutebtn"/>
+    <img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_off.png" title="Mute" id="mutebtn"/>
 	</div>
 	<div id="dummy"></div>
 	<div id="dummy2"></div>
 	<div id="dummy3"></div>
 		<script type="module">
+
+		//autoplay="true"
 
 			import * as THREE from '/SlideShow_GPU_HDR/three.js/build/three.module.js';
 
@@ -170,6 +217,50 @@
 						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_9656And9more.hdr'];
 				//document.getElementById("myAudio").play();
 
+				var setsOfFiles = 	{theSea: {name: "The Sea" ,audio_file:  'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/gh-pages/mp3/ocean_waves.mp3',
+											text_list: ["item_0","item_1"], list:[
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2525And7more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2601_2_3_4_6_7_8.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2755And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_3660And7more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_4144_5_6_newest.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_4191_2_3.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_4940And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_5471And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_5569And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_6256And9more2.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_6313And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_7030And7more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_7645And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_8418And7more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_8633_4_5_6_7_8_9.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_8643And9more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_9146And9more_more.hdr',
+											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_9656And9more.hdr']},
+										theForest: {name: "The Forest", audio_file: 'mp3/the_forest.mp3', text_list: ["item2_0","item2_1"], list:[
+											"the_forest_portfolio/_MG_0886And9more.hdr",
+											"the_forest_portfolio/_MG_2343And9more.hdr",
+											"the_forest_portfolio/_MG_5545And9more.hdr",
+											"the_forest_portfolio/_MG_5560And9more.hdr",
+											"the_forest_portfolio/_MG_8041And9more.hdr",
+											"the_forest_portfolio/_MG_3677 Panorama.jpg",
+											"the_forest_portfolio/_MG_9778_79_80.hdr",
+											"the_forest_portfolio/_MG_9700And9more.hdr",
+											"the_forest_portfolio/_MG_8583_4_5.hdr",
+											"the_forest_portfolio/_MG_8208_09_10_i.hdr",
+											"the_forest_portfolio/_MG_0152And9more.hdr",
+											"the_forest_portfolio/_MG_0239_40_41_42_43.hdr",
+											"the_forest_portfolio/_MG_7294And8more.hdr",
+											"the_forest_portfolio/IMG_5471_2_3_4.hdr",
+											"the_forest_portfolio/IMG_5499_500_501_502.hdr",
+											"the_forest_portfolio/IMG_5495_6_7_8.hdr",
+											"the_forest_portfolio/_MG_0320_1_2_3_4.hdr",
+											"the_forest_portfolio/_MG_6033 Panorama.jpg",
+											"the_forest_portfolio/_MG_0227_8.hdr",
+											"the_forest_portfolio/_MG_0194_5.hdr",
+											"the_forest_portfolio/_MG_9713_4_5.hdr"
+										]}};
+
 				init();
 
 			function init() {
@@ -180,10 +271,12 @@
 									   pauseBtnImage :'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/slide_show_assets/p.png',
 									   muteOffBtnImage :'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_off.png',
 									   muteonBtnImage :'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/audio_icons/mute_on.png',
+									   menuIcon: '/slide_show_assets/menu.png',
 									   mutebtn : "mutebtn",
 									   pbtnId:'pausebtn',
 									   s : scene,
 									   f : files,
+									   sets: setsOfFiles,
 									   st : 0,
 									   ft: "crossFade",//"none",// "OutIn", //"crossFade",
 									   audioBit: 1,
@@ -194,6 +287,8 @@
 									   };
 			    YAHOO.util.Event.addListener(element.pbtnId, 'click', toggleShow, element);
 			    YAHOO.util.Event.addListener(element.mutebtn, 'click', toggleAudio, element);
+
+
 				  var textList =  ["item_0","item_1"];
 			 	 var i = 8;
 
@@ -209,7 +304,7 @@
 				var id = renderer.domElement.id;
 
 
-				renderer.toneMapping = THREE.ReinhardToneMapping;
+				//renderer.toneMapping = THREE.ReinhardToneMapping;
 				renderer.toneMappingExposure = params.exposure;
 
 				renderer.gammaOutput = true;
@@ -219,6 +314,59 @@
 				var aspect = window.innerWidth / window.innerHeight;
 				camera = new THREE.OrthographicCamera( - aspect, aspect, 1, - 1, 0, 1 );
 				var texture01 =[];
+
+
+  				function changeToDifferentShow(eventObj, element){
+       			    clearInterval(element.slide_showObj);
+					var targetId = YAHOO.util.Event.getTarget(eventObj).id;
+					element.st =0;
+					element.tObj[3] =targetId;
+       				clearTimeout(element.textShow.element.timer)
+       				for(var x= 0; x<element.textShow.textList.length;x++){
+						h.hide(element.textShow.textList[x]);
+       				}
+					h.show( element.sets[targetId].text_list[0]);
+					h.hide(id,'v');
+					document.getElementById("myAudio").muted = true;
+					var SlideShowTitle = document.getElementById("SlideShowTitle");
+					SlideShowTitle.innerHTML =  element.sets[targetId].name + " By,  Brian Spiegel.";
+					SlideShowTitle = h.deleteDomElement(SlideShowTitle);
+
+					element.textShow =  h.deleteDomElement(element.textShow);
+					element.textShow = new slideShowClass({fade:true,
+											  fadeTime:1.5,
+											  initInterval:i,
+											  interval: i*2,
+											  'textList': element.sets[targetId].text_list,
+											  onCompleteDelay:i/2,
+												onComplete: function(){
+													 changeAduioSrc('myAudio',element.sets[targetId].audio_file);
+													 var domAudioObj =  document.getElementById("myAudio");
+													domAudioObj.muted = false;
+													domAudioObj.load();
+													domAudioObj.play();
+													domAudioObj = h.deleteDomElement(domAudioObj);
+													h.show("sig");
+													h.show(id,'v');
+													setnewtexture(scene, element.sets[targetId].list[0], element.t, params, element.tObj, element.st, element.sets[targetId].list.length,element.ft,"new", element.debug, element);
+													element.st++;
+													h.updateHTML('index',"1/"+ element.sets[targetId].list.length + "<br/>" + element.sets[targetId].name + " by , <br/> " );
+													element.tObj[2] =  element.sets[targetId].name;
+
+													element.slide_showObj = setInterval(
+															slideShow(element.s, element.sets[targetId].list,element.st, element.t, element.p, element.tObj, element.ft, element.debug, element),8000);
+
+
+											  }
+											  });
+  				}
+				function changeAduioSrc(id,src){
+					var domObj = document.getElementById(id);
+					if(domObj){
+					  domObj.children[0].src = src;
+					}
+					domObj = new helperClass().deleteDomElement(domObj);
+				 }
 
 				function changeImageSrc(id,src){
 					var domObj = document.getElementById(id);
@@ -252,11 +400,11 @@
 					}
 				}
  				//setInterval(function(){ alert("Hello"); }, 3000);
-				function slideShow(scene,files,ticks, texture01, params, timerobj, fadeType , debug){
-					var t0 =	ticks, par = params, texture01, timer = timerobj, ft = fadeType, d = debug;
+				function slideShow(scene,files,ticks, texture01, params, timerobj, fadeType , debug, element){
+					var t0 =	ticks, par = params, texture01, timer = timerobj, ft = fadeType, d = debug, el = element;
 					var s = scene, f = files;
 					return function (){
-						setnewtexture(s,f[t0], texture01, par,timer, t0, f.length, ft,false, d);
+						setnewtexture(s,f[t0], texture01, par,timer, t0, f.length, ft,false, d, el);
 
 
 						t0++;
@@ -266,36 +414,51 @@
 					}
 				}
  					h.hide("sig");
-  					h.show(textList[0])
-			  new slideShowClass({fade:true,
+  					h.show(element.sets.theForest.text_list[0])
+					var SlideShowTitle = document.getElementById("SlideShowTitle");
+					SlideShowTitle.innerHTML =  element.sets.theForest.name + " By,  Brian Spiegel.";
+					SlideShowTitle = h.deleteDomElement(SlideShowTitle);
+			    YAHOO.util.Event.addListener(["theSea", "theForest" ], 'click', changeToDifferentShow, element);
+
+			 element.textShow = new slideShowClass({fade:true,
 				                      fadeTime:1.5,
 				                      initInterval:i,
 				                      interval: i*2,
-				                      'textList': textList,
+				                      'textList': element.sets.theForest.text_list,
 				                      onCompleteDelay:i/2,
                       					onComplete: function(){
+											 changeAduioSrc('myAudio',element.sets.theForest.audio_file);
+											 var domAudioObj =  document.getElementById("myAudio");
+											 domAudioObj.load();
+											 domAudioObj.play();
+											 h.deleteDomElement(domAudioObj);
 
  											h.show("sig");
-											setnewtexture(scene,files[0], element.t, params, element.tObj, element.st, element.f.length,element.ft,"new", element.debug);
+											setnewtexture(scene,element.sets.theForest.list[0], element.t, params, element.tObj, element.st, element.sets.theForest.list.length,element.ft,"new", element.debug, element);
 											element.st++;
-											h.updateHTML('index',"1/"+files.length + "<br/>The Sea By, <br/> " );
+											element.tObj[3] ='theForest';
+											h.updateHTML('index',"1/"+ element.sets.theForest.list.length + "<br/>" + element.sets.theForest.name + " by , <br/> " );
+											element.tObj[2] =  element.sets.theForest.name ;
 
 											element.slide_showObj = setInterval(
-													slideShow(element.s,element.f,element.st, element.t, element.p, element.tObj, element.ft, element.debug),10000)
+													slideShow(element.s,element.sets.theForest.list,element.st, element.t, element.p, element.tObj, element.ft, element.debug, element),8000);
 
 
 									  }
 									  });
 								/*		  */
+
+								// audio_file
+
 				function toggleAudio(eventObj, element){
 					if(element.audioBit){
 					   changeImageSrc(element.mutebtn,element.muteonBtnImage);
 					   element.audioBit = 0 ;
-						document.getElementById("myAudio").pause();
+						document.getElementById("myAudio").muted = true;
 					 }else{
 					   element.audioBit = 1 ;
 					   changeImageSrc(element.mutebtn,element.muteOffBtnImage);
-						document.getElementById("myAudio").play();
+						document.getElementById("myAudio").muted = false;
 
 					}
 
@@ -307,12 +470,12 @@
 					   element.bit = 0 ;
 					 }else{
 					   element.bit = 1 ;
-					   slideShow(element.s,element.f,element.st, element.t, element.p, element.tObj, element.ft, element.debug)();
 					   element.st++;
+					   slideShow(element.s,element.sets[element.tObj[3]].list,element.st, element.t, element.p, element.tObj, element.ft, element.debug, element)();
 					   changeImageSrc(element.pbtnId,element.pauseBtnImage);
        				   clearInterval(element.slide_showObj);
 						element.slide_showObj = setInterval(
-								slideShow(element.s,element.f,element.st, element.t, element.p, element.tObj, element.ft, element.debug),10000)
+								slideShow(element.s,element.sets[element.tObj[3]].list,element.st, element.t, element.p, element.tObj, element.ft, element.debug, element),10000)
 					}
 
 				}
@@ -321,8 +484,11 @@
 				//gui.add( params, 'exposure', 0, 4, 0.01 ).onChange( render );
 				//gui.open();
 
-			function setnewtexture(scene, filepath, oldmesh, param0, time, index, len, fadeType, isNew,debug){
-				if(oldmesh[0]){
+			function setnewtexture(scene, filepath, oldmesh, param0, time, index, len, fadeType, isNew,debug, el){
+				var broken = filepath.split('.');
+				var file_ext = broken[broken.length -1 ];
+
+				if(el.t[0]){
 				  	if (fadeType  == "OutIn"){
 						  h.fadeAnimation({run: true,
 						  seconds: 3,
@@ -331,15 +497,19 @@
 						  start:1.0,
 						  finish: 0.0,
 						  onTween:function(obj1,obj2,obj3){
-								param0.exposure  = parseFloat(YAHOO.util.Dom.getStyle("dummy3","opacity"))*1.2;
+						  		if(file_ext){
+									param0.exposure  = parseFloat(YAHOO.util.Dom.getStyle("dummy3","opacity"))*1.2;
+								}else{
+									 el.t.material.opacity =  parseFloat(YAHOO.util.Dom.getStyle("dummy3","opacity"));
+								}
 								render();
 						  },
 						  onComplete:function(){
 								param0.exposure  = 0;
 								render();
-								scene.remove( oldmesh[0] );
+								scene.remove( el.t[0] );
 								render();
-							  setMesh(filepath,id,params, t, time, oldmesh, index, len, fadeType, isNew,debug);
+							  setMesh(filepath,id,params, t, time, el.t, index, len, fadeType, isNew,debug, el);
 
 
 						  },
@@ -348,161 +518,203 @@
 							//h.show(renderer.domElement);
 						  }});
 					}else{
-							  setMesh(filepath,id,params, t, time, oldmesh, index, len, fadeType, isNew,debug);
+							  setMesh(filepath,id,params, t, time, el.t, index, len, fadeType, isNew,debug, el);
 					}
 				}else{
-					setMesh(filepath,id,param0, t, time, oldmesh, index, len, fadeType, isNew,debug);
+					setMesh(filepath,id,param0, t, time, el.t, index, len, fadeType, isNew,debug, el);
 				}
 
 
 			}
 
 
-			function setMesh(filepath,id0,params, t, timerObj, texture_mesh, index, len,fadeType, isNew,debug){
+			function setMesh(filepath,id0,params, t, timerObj, texture_mesh, index, len,fadeType, isNew,debug, el){
+				var broken = filepath.split('.');
+				var file_ext = broken[broken.length -1 ];
 
-				 new RGBELoader()
-					.setDataType( THREE.UnsignedByteType ) // alt: FloatType, HalfFloatType
-					.load( filepath, function ( texture, textureData ) {
-						try{
+				var setImage = function ( texture, textureData ) {
+										try{
 
-							//console.log( textureData );
-							//console.log( texture );
+											//console.log( textureData );
+											//console.log( texture );
 
-							var material = new THREE.MeshBasicMaterial( { map: texture } );
+											var material = new THREE.MeshBasicMaterial( { map: texture } );
+											if(textureData){
+												renderer.gammaOutput = true;
+											   var quad = new THREE.PlaneBufferGeometry( 1.5 * textureData.width / textureData.height, 1.5 );
+											}else{
+												renderer.gammaOutput = false;
+											   var quad = new THREE.PlaneBufferGeometry( 1.5 * texture.image.width / texture.image.height, 1.5 );
 
-							var quad = new THREE.PlaneBufferGeometry( 1.5 * textureData.width / textureData.height, 1.5 );
-
-								var mesh = new THREE.Mesh( quad, material );
-
-								scene.add(mesh);
-								if(!isNew &&  fadeType !== "OutIn"){
-									mesh.material.opacity = 1.0;
-									mesh.material.transparent = false;
-									params.exposure  = 1.2;
-								}
-
-								if(texture_mesh[0]   &&  fadeType !== "OutIn"){
-									texture_mesh[0].material.transparent = true;
-									texture_mesh[0].material.opacity = 1.0;
-								}
-
-							if( "OutIn" == fadeType){
-								if(texture_mesh[0]){
-									delete texture_mesh[0];
-									texture_mesh[0] = mesh;
-								}
-								params.exposure  = 0;
-								h.fadeAnimation({run: true, seconds:3,
-									obj:"dummy3",
-									start:0.0,
-									finish: 1.0,
-									method: YAHOO.util.Easing.easeInStrong,
-									onTween:function(obj1,obj2,obj3){
-										params.exposure  = parseFloat(YAHOO.util.Dom.getStyle("dummy3","opacity"))*1.2;
-										render();
-									},
-									onComplete:function(){
-										texture_mesh[0] = mesh;
-									},
-									onStart: function(){
-										if( Number.isInteger(index)){
-											h.updateHTML('index', parseInt(index+1) +"/"+len + "<br/>The Sea By, <br/> " );
-										}
-										YAHOO.util.Dom.setStyle("dummy3","opacity",0.0);
-									}});
-							}else if("crossFade" == fadeType){
-								mesh.material.opacity = 0.0;
-								mesh.material.transparent = true;
-
-								//	method: YAHOO.util.Easing.easeOutStrong,
-								if(texture_mesh[0]){
-									h.fadeAnimation({run: true, seconds:3,
-										obj:"dummy2",
-										start:1.0,
-										finish: 0.0,
-										onComplete:function(){
-											timerObj[1] = "done";
-										},
-										onTween:function(obj1,obj2,obj3){
-											if(timerObj[1] !== "done"){
-												//debug.output(parseFloat(YAHOO.util.Dom.getStyle("dummy2","opacity")))
-												//render();
 											}
-										},
-										onStart: function(){
-											timerObj[1] = "";
-											texture_mesh[0].opacity = 1.0;
-											texture_mesh[0].transparent = true;
-											params.exposure  = 1.2;
-											texture_mesh[0].material.opacity =   1.0;
-											if( Number.isInteger(index)){
-											h.updateHTML('index', parseInt(index+1) +"/"+len + "<br/>The Sea By, <br/> " );
-										}
-										YAHOO.util.Dom.setStyle("dummy2","opacity",1.0);
-										}});
-								}
-							//method: YAHOO.util.Easing.easeInStrong,
+												var mesh = new THREE.Mesh( quad, material );
 
-								h.fadeAnimation({run: true, seconds:3,
-									obj:"dummy",
-									start:0.0,
-									finish: 1.0,
-									onTween:function(obj1,obj2,obj3){
-										//params.exposure  = parseFloat(YAHOO.util.Dom.getStyle("dummy","opacity")*1.2);
-										if(timerObj[1] !== "done"){
-											if(texture_mesh[0]){
-												texture_mesh[0].material.opacity =  parseFloat(YAHOO.util.Dom.getStyle("dummy2","opacity"));
+												scene.add(mesh);
+												if(!isNew &&  fadeType !== "OutIn"){
+														mesh.material.opacity = 1.0;
+														mesh.material.transparent = false;
+													if(textureData){
+														params.exposure  = 1.2;
+													}else{
+														params.exposure  = 1;
+													}
+												}
+
+												if(el.t[0]   &&  fadeType !== "OutIn"){
+													el.t[0].material.transparent = true;
+													el.t[0].material.opacity = 1.0;
+												}
+
+											if( "OutIn" == fadeType){
+												if(el.t[0]){
+													el.t[0] = mesh;
+												}
+												params.exposure  = 0;
+												h.fadeAnimation({run: true, seconds:3,
+													obj:"dummy3",
+													start:0.0,
+													finish: 1.0,
+													method: YAHOO.util.Easing.easeInStrong,
+													onTween:function(obj1,obj2,obj3){
+														if(textureData){
+															params.exposure  = parseFloat(YAHOO.util.Dom.getStyle("dummy3","opacity"))*1.2;
+														}else{
+															mesh.material.opacity =  parseFloat(YAHOO.util.Dom.getStyle("dummy3","opacity"));
+														}
+														render();
+													},
+													onComplete:function(){
+														el.t[0] = mesh;
+													},
+													onStart: function(){
+														if( Number.isInteger(index)){
+															h.updateHTML('index', parseInt(index+1) +"/"+len + "<br/>"+timerObj[2] +" By, <br/> " );
+														}
+														YAHOO.util.Dom.setStyle("dummy3","opacity",0.0);
+													}});
+											}else if("crossFade" == fadeType){
+												mesh.material.opacity = 0.0;
+												mesh.material.transparent = true;
+
+												//	method: YAHOO.util.Easing.easeOutStrong,
+												if(texture_mesh[0]){
+													h.fadeAnimation({run: true, seconds:3,
+														obj:"dummy2",
+														start:1.0,
+														finish: 0.0,
+														onComplete:function(){
+															timerObj[1] = "done";
+														},
+														onTween:function(obj1,obj2,obj3){
+															if(timerObj[1] !== "done"){
+																//debug.output(parseFloat(YAHOO.util.Dom.getStyle("dummy2","opacity")))
+																//render();
+															}
+														},
+														onStart: function(){
+															timerObj[1] = "";
+															el.t[0].opacity = 1.0;
+															el.t[0].transparent = true;
+
+															if(textureData){
+																params.exposure  = 1.2;
+															}else{
+																params.exposure  = 1;
+															}
+
+
+															el.t[0].material.opacity =   1.0;
+															if( Number.isInteger(index)){
+																h.updateHTML('index', parseInt(index+1) +"/"+len + "<br/>"+timerObj[2] + " By, <br/> " );
+															}
+															YAHOO.util.Dom.setStyle("dummy2","opacity",1.0);
+														}});
+												}
+											//method: YAHOO.util.Easing.easeInStrong,
+
+												h.fadeAnimation({run: true, seconds:3,
+													obj:"dummy",
+													start:0.0,
+													finish: 1.0,
+													onTween:function(obj1,obj2,obj3){
+														//params.exposure  = parseFloat(YAHOO.util.Dom.getStyle("dummy","opacity")*1.2);
+														if(timerObj[1] !== "done"){
+															if(texture_mesh[0]){
+																texture_mesh[0].material.opacity =  parseFloat(YAHOO.util.Dom.getStyle("dummy2","opacity"));
+															}
+															mesh.material.opacity =  parseFloat(YAHOO.util.Dom.getStyle("dummy","opacity"));
+															render();
+														}
+													},
+														onComplete:function(){
+															if(el.t[0]){
+																scene.remove( el.t[0] );
+															}
+															//params.exposure  = 1.2;
+															mesh.material.opacity = 1.0;
+															timerObj[1] = "done";
+															render();
+																el.t[0] = mesh;
+
+
+
+														},
+													onStart: function(){
+														//params.exposure  = 0.0;
+														params.exposure  = 1.2;
+														mesh.material.opacity =   0.0;
+														if( Number.isInteger(index)){
+															h.updateHTML('index', parseInt(index+1) +"/"+len + "<br/>"+timerObj[2] +" By, <br/> " );
+														}
+														YAHOO.util.Dom.setStyle("dummy","opacity",0.0);
+														render();
+													}});
+											}else{
+
+												mesh.material.opacity = 1.0;
+												mesh.material.transparent = false;
+													if(textureData){
+														params.exposure  = 1.2;
+													}else{
+
+														params.exposure  = 1;
+													}
+
+												if(texture_mesh[0]){
+													scene.remove( el.t[0] );
+
+												}
+												h.updateHTML('index', parseInt(index + 1) +"/"+len + "<br/>"+timerObj[2] +"  By, <br/> " );
+												render();
+												el.t[0] = mesh;
 											}
-											mesh.material.opacity =  parseFloat(YAHOO.util.Dom.getStyle("dummy","opacity"));
-											render();
+										}catch(error){
+											debugger;
 										}
-									},
-										onComplete:function(){
-											if(texture_mesh[0]){
-												scene.remove( texture_mesh[0] );
-											}
-											//params.exposure  = 1.2;
-											mesh.material.opacity = 1.0;
-											timerObj[1] = "done";
-											render();
-											delete texture_mesh[0];
-											texture_mesh[0] = mesh;
+
+										//  clearInterval(timerObj[0]);
+										//  timerObj[0] =null;
+										// timerObj[0] = setInterval(set_aminte_pulse(params, t), 1);
+					}
 
 
-										},
-									onStart: function(){
-										//params.exposure  = 0.0;
-										params.exposure  = 1.2;
-										mesh.material.opacity =   0.0;
-										if( Number.isInteger(index)){
-											h.updateHTML('index', parseInt(index+1) +"/"+len + "<br/>The Sea By, <br/> " );
-										}
-										YAHOO.util.Dom.setStyle("dummy","opacity",0.0);
-										render();
-									}});
-							}else{
 
-								mesh.material.opacity = 1.0;
-								mesh.material.transparent = false;
-									params.exposure  = 1.2;
 
-								if(texture_mesh[0]){
-									params.exposure  = 1.2;
-									scene.remove( texture_mesh[0] );
-									delete texture_mesh[0];
-								}
-								h.updateHTML('index', parseInt(index + 1) +"/"+len + "<br/>The Sea By, <br/> " );
-								render();
-								texture_mesh[0] = mesh;
-							}
-						}catch(error){
-							debugger;
-						}{
+				switch(file_ext){
+					case 'hdr':
+						 new RGBELoader()
+							.setDataType( THREE.UnsignedByteType ) // alt: FloatType, HalfFloatType
+							.load( filepath, setImage );
+							break;
+					default:
+						THREE.ImageUtils.loadTexture(filepath, {}, setImage);
+						break;
 
-						//  clearInterval(timerObj[0]);
-						//  timerObj[0] =null;
-						// timerObj[0] = setInterval(set_aminte_pulse(params, t), 1);
-				}} );
+
+
+
+				}
+
 			}
 
 

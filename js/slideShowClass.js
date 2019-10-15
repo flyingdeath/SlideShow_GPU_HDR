@@ -4,7 +4,7 @@ function slideShowClass(options){
       this.elements = {};
       this.h = new helperClass();
       this.initializeOptions(options);
-      this.initialize();
+      this.element =  this.initialize(); 
     }catch(err){
       debugger;
     }
@@ -48,6 +48,7 @@ function slideShowClass(options){
     }else{
       this.timedRunShow(element);
     }
+    return element;
     
   }
  
