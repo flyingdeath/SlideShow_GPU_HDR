@@ -327,11 +327,15 @@
        				}
 					h.show( element.sets[targetId].text_list[0]);
 					h.hide(id,'v');
+					if(element.t[0]){
+						scene.remove( element.t[0] );
+						element.t[0] = null;
+					}
 					document.getElementById("myAudio").muted = true;
 					var SlideShowTitle = document.getElementById("SlideShowTitle");
 					SlideShowTitle.innerHTML =  element.sets[targetId].name + " By,  Brian Spiegel.";
 					SlideShowTitle = h.deleteDomElement(SlideShowTitle);
-
+					render();
 					element.textShow =  h.deleteDomElement(element.textShow);
 					element.textShow = new slideShowClass({fade:true,
 											  fadeTime:1.5,
@@ -348,6 +352,8 @@
 													domAudioObj = h.deleteDomElement(domAudioObj);
 													h.show("sig");
 													h.show(id,'v');
+													//element.tObj = [null]
+													element.tObj[1] = "";
 													setnewtexture(scene, element.sets[targetId].list[0], element.t, params, element.tObj, element.st, element.sets[targetId].list.length,element.ft,"new", element.debug, element);
 													element.st++;
 													h.updateHTML('index',"1/"+ element.sets[targetId].list.length + "<br/>" + element.sets[targetId].name + " by , <br/> " );
