@@ -330,6 +330,7 @@
 					h.show( element.sets[targetId].text_list[0]);
 					h.hide(id,'v');
 					if(element.t[0]){
+						 element.t[0].material.dispose();
 						scene.remove( element.t[0] );
 						element.t[0] = null;
 					}
