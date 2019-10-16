@@ -171,6 +171,7 @@
 	  	<div id="innerBtnContainer">
 			<img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/gh-pages/slide_show_assets/menu.png" title="Menu" id="menuBtn" />
 			<span id="projects_container">
+							<!-- super critical -----------------------------------------------------------------------------make sure the id's of thumbnail show icon is the same as your slide show set key -->
 				<img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/gh-pages/the_sea_portfiolo/cover_thumbnail/_MG_2601_2_3_4_6_7_8.jpg" title="The Sea" id="theSea" class="thumbnail" />
 				<img src="https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/gh-pages/the_forest_portfolio/coverThumbnail/_MG_7294And8more.jpg" title="The Forest" id="theForest" class="thumbnail" />
 			</span>
@@ -217,6 +218,7 @@
 						'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_9656And9more.hdr'];
 				//document.getElementById("myAudio").play();
 
+				// super critical 		right here-----------------------------------------------------------------------------make sure the id's of thumbnail show icon is the same as your slide show set key
 				var setsOfFiles = 	{theSea: {name: "The Sea" ,audio_file:  'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/gh-pages/mp3/ocean_waves.mp3',
 											text_list: ["item_0","item_1"], list:[
 											'https://raw.githubusercontent.com/flyingdeath/SlideShow_GPU_HDR/master/the_sea_portfiolo/_MG_2525And7more.hdr',
@@ -352,7 +354,6 @@
 													domAudioObj = h.deleteDomElement(domAudioObj);
 													h.show("sig");
 													h.show(id,'v');
-													//element.tObj = [null]
 													element.tObj[1] = "";
 													setnewtexture(scene, element.sets[targetId].list[0], element.t, params, element.tObj, element.st, element.sets[targetId].list.length,element.ft,"new", element.debug, element);
 													element.st++;
